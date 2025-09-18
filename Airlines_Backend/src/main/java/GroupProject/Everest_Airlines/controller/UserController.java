@@ -25,7 +25,7 @@ public class UserController {
 
     // Get user by id
     @GetMapping("/{id}")
-    public Optional<User> getUserById(@PathVariable Long id) {
+    public Optional<User> getUserById(@PathVariable int id) {
         return userRepository.findById(id);
     }
 
@@ -38,7 +38,7 @@ public class UserController {
 
     // Update a user
     @PutMapping("/{id}")
-    public User updateUser(@PathVariable Long id, @RequestBody User updatedUser) {
+    public User updateUser(@PathVariable int id, @RequestBody User updatedUser) {
         return userRepository.findById(id).map(user -> {
             user.setUsername(updatedUser.getUsername());
             user.setPassword(updatedUser.getPassword());
@@ -60,7 +60,7 @@ public class UserController {
 
     // Delete a user
     @DeleteMapping("/{id}")
-    public void deleteUser(@PathVariable Long id) {
+    public void deleteUser(@PathVariable int id) {
         userRepository.deleteById(id);
     }
 }

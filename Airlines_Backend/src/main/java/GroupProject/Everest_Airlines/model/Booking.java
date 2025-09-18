@@ -9,13 +9,12 @@ public class Booking {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int bookingId;
 
     private String passengerName;
     private String flightNumber;
     private String email;
     private int seatsBooked;
-
     private LocalDateTime bookingDate;
 
     public Booking() {}
@@ -29,8 +28,8 @@ public class Booking {
     }
 
     // Getters and Setters
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
+    public int getBookingId() { return bookingId; }
+    public void setBookingId(int bookingId) { this.bookingId = bookingId; }
 
     public String getPassengerName() { return passengerName; }
     public void setPassengerName(String passengerName) { this.passengerName = passengerName; }

@@ -25,7 +25,7 @@ public class BookingController {
 
     // Get booking by id
     @GetMapping("/{id}")
-    public Optional<Booking> getBookingById(@PathVariable Long id) {
+    public Optional<Booking> getBookingById(@PathVariable int id) {
         return bookingRepository.findById(id);
     }
 
@@ -38,7 +38,7 @@ public class BookingController {
 
     // Update a booking
     @PutMapping("/{id}")
-    public Booking updateBooking(@PathVariable Long id, @RequestBody Booking updatedBooking) {
+    public Booking updateBooking(@PathVariable int id, @RequestBody Booking updatedBooking) {
         return bookingRepository.findById(id).map(booking -> {
             booking.setPassengerName(updatedBooking.getPassengerName());
             booking.setFlightNumber(updatedBooking.getFlightNumber());
@@ -50,7 +50,7 @@ public class BookingController {
 
     // Delete a booking
     @DeleteMapping("/{id}")
-    public void deleteBooking(@PathVariable Long id) {
+    public void deleteBooking(@PathVariable int id) {
         bookingRepository.deleteById(id);
     }
 }
