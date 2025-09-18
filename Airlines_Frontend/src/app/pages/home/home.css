@@ -1,0 +1,84 @@
+.section-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+.home-content {
+  position: absolute; 
+  z-index: 2;
+  font-size: 2rem;
+  text-align: left;
+  transform: translate(-50%, -50%);
+  top: 30%; 
+  left: 30%;
+
+}
+.home-background {
+    position: absolute;
+    /* filter: brightness(0.9);  */
+    margin-top: 15px;
+    z-index: 0; 
+    display: flex; 
+  justify-content: center;
+  align-items: center;     
+  position: relative;
+  background-image: url("/assets/images/aeroplane.jpeg"); /* Replace with your image path */
+  width: 1400px;
+  background-position: 0% 30%;  
+  height: 100vh;              
+  justify-content: center;     
+  align-items: center;          
+  position: relative;
+  border-radius: 1.5rem;
+  margin-bottom: 15px;
+}
+.home-background::before{
+     content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; height: 100%;
+  z-index: 1;
+}
+.flight-btn{
+    color:white;
+    background-color: transparent;
+    border-radius: 1rem;
+    border: 3px solid rgb(243, 178, 98);
+    padding: 0.5rem 1rem;
+}
+.flight-btn:hover{
+    background-color: rgb(223, 132, 22);
+    color: black;
+    border: 3px solid rgb(243, 178, 98);
+    transition: 0.3s;
+}
+
+.home-cardinfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.home-booking{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid 
+    rgb(207, 207, 207);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    background-color: rgb(234, 233, 233);
+    justify-content: center;
+    align-content: center;
+}

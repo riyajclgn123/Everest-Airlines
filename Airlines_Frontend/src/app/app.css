@@ -1,0 +1,43 @@
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  gap: 2rem;
+}
+
+.left-side {
+  flex: 1;
+}
+
+.right-side {
+  flex: 1;
+}
+
+.divider {
+  width: 1px;
+  background-color: #ccc;
+}
+
+.pill-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #f3f3f3;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #333;
+}
+
+.pill:hover {
+  background-color: #ddd;
+}

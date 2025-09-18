@@ -1,0 +1,13 @@
+.footer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    background: linear-gradient(to right, #09c9ef, #fd03f0);
+    color:  rgb(226, 230, 195);;
+    position: relative;
+    width: 100%;
+    font-size: large;
+    font-weight: 500;
+}
